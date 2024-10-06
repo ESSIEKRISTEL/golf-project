@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+     let names= ["Hole-in-one!","Eagle","Birdie","Par","Bogey","Double Bogey","Go Home!"];
+
+    //Golf score(5, 4) here we are going to pass the par and pass in the stroke and its
+    //going to return the nickname meaning 5 is the par and 4 is stroke
+    function golfscore(par , strokes){
+        if(  strokes==1){
+            return names[0]//it will return variable name declared up ie eagle but we use index to address the array
+        }
+        else if(strokes <= par-2){
+            return names [1]
+        }
+        else if( strokes == par-1){
+            return names[2]
+        }
+        else if(strokes == par){
+            return names[3]
+        }
+        else if(strokes == par + 1){
+            return names[4]
+        }
+        else if(strokes == par + 2){
+            return names[5]
+        }
+        else if(strokes >= par + 3){//when the player plays badly and shot wrong less than 3 strokes he goes home            return names[6]
+        }
+        return names [6]
+
+       /* else{
+            return ooops 
+        }*/
+    }
+    document.write(golfscore(5,9));
+</script>
+</body>
+</html>
